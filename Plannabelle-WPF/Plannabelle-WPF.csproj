@@ -7,10 +7,4 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Reference Include="PlannabelleClassLibrary">
-      <HintPath>..\..\PlannabelleClassLibrary\PlannabelleClassLibrary\bin\Debug\netcoreapp3.1\PlannabelleClassLibrary.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
 </Project>

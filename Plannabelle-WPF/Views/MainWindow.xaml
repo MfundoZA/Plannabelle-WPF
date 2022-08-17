@@ -15,9 +15,9 @@
         
         <Menu x:Name="mnuMenu" Grid.Row="0" MinHeight="25" MaxHeight="30">
             <MenuItem Header="New Semester" Click="mniNewSemesterOnClick" MinHeight="25" MaxHeight="30"></MenuItem>
-            <MenuItem Header="New Expense" Click="mniNewModuleOnClick" MinHeight="25" MaxHeight="30"></MenuItem>
-            <MenuItem Header="Show All Semesters" Click="mniShowAllSemesters" MinHeight="25" MaxHeight="30"></MenuItem>
-            <MenuItem Header="Add Self Study Hours" Click="mniAddSelfStudyHours" MinHeight="25" MaxHeight="30"></MenuItem>
+            <MenuItem Header="New Module" Click="mniNewModuleOnClick" MinHeight="25" MaxHeight="30"></MenuItem>
+            <MenuItem Header="Show All Semesters" Click="mniShowAllSemestersOnClick" MinHeight="25" MaxHeight="30"></MenuItem>
+            <MenuItem Header="Add Self Study Hours" MinHeight="25" MaxHeight="30" Click="mniAddSelfHoursOnClick"></MenuItem>
         </Menu>
 
         <Grid Grid.Row="1">

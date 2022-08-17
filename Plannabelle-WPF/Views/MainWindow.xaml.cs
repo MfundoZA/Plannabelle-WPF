@@ -35,7 +35,12 @@ namespace Plannabelle_WPF
 
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        private void mniShowAllSemestersOnClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void mniAddSelfHoursOnClick(object sender, RoutedEventArgs e)
         {
 
         }
