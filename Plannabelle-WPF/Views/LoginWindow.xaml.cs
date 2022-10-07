@@ -2,6 +2,7 @@
 using PlannabelleClassLibrary.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -39,7 +40,7 @@ namespace Plannabelle_WPF.Views
             User user = new User(username, password);
 
             // Compare User object to users in the users textfile and see if a match is found
-            List<User> Users = loginViewModel.ReadUsersfromDatabase();
+            IEnumerable<User> Users = loginViewModel.ReadUsersfromDatabase();
 
             foreach (User student in Users)
             {
@@ -70,7 +71,7 @@ namespace Plannabelle_WPF.Views
             User user = new User(username, password);
 
             // Write user to textfile
-            if (loginViewModel.WriteUserToDatabase(user) == false)
+            if (loginViewModel.WriteUserToDatabase(user).Result == false)
             {
                 MessageBox.Show("Your account could not be created! Please try again later.");
             }
