@@ -47,8 +47,10 @@ namespace Plannabelle_WPF.Views
                 if (user.Username == student.Username && user.HashedPassword == student.HashedPassword)
                 {
                     MessageBox.Show("Account found! Moving to home page.");
-                    new MainWindow().Show();
+                    BaseViewModel.User = student;
                     userFound = true;
+
+                    new MainWindow().Show();
                     this.Close();
                     break;
                 }
