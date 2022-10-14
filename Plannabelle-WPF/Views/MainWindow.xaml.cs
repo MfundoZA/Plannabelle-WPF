@@ -54,5 +54,15 @@ namespace Plannabelle_WPF.Views
             new AddSelfStudyHoursWindow().ShowDialog();
             this.Show();
         }
+
+        private void btnLeftAngleNav_Click(object sender, RoutedEventArgs e)
+        {
+                btnLeftAngleNav.IsEnabled = MainViewModel.moveToPreviousSemester();
+        }
+
+        private void btnRignAngleNav_Click(object sender, RoutedEventArgs e)
+        {
+            btnRignAngleNav.IsEnabled = MainViewModel.moveToNextSemester();
+        }
     }
 }
