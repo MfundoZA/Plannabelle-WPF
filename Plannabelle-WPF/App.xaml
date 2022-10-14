@@ -4,8 +4,10 @@
              xmlns:local="clr-namespace:Plannabelle_WPF"
              StartupUri="Views/LoginWindow.xaml">
     <Application.Resources>
-        <Style x:Key="lblAngleNav" TargetType="Label">
+        <Style x:Key="btnAngleNav" TargetType="Button">
             <Setter Property="FontSize" Value="24" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="BorderBrush" Value="Transparent" />
         </Style>
     </Application.Resources>
 </Application>
