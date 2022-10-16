@@ -29,8 +29,8 @@
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
 
-            <Button x:Name="btnLeftAngleNav" Grid.Column="0" Content="&lt;" Style="{StaticResource btnAngleNav}" HorizontalAlignment="Center" Padding="0,0,0,0" Click="btnLeftAngleNav_Click" />
-            <Label Grid.Column="1" Content="{Binding currentSemester.StartDate}" HorizontalAlignment="Center" FontSize="16"/>
+            <Button x:Name="btnLeftAngleNav" Grid.Column="0" Content="&lt;" Style="{StaticResource btnAngleNav}" HorizontalAlignment="Center" Padding="0,0,0,0" Click="btnLeftAngleNav_Click" IsEnabled="False" />
+            <Label Grid.Column="1" Content="{Binding CurrentSemester.StartDate}" HorizontalAlignment="Center" FontSize="16"/>
             <Button x:Name="btnRignAngleNav" Grid.Column="2" Content="&gt;" Style="{StaticResource btnAngleNav}"  HorizontalAlignment="Center" Padding="0,0,0,0" Click="btnRignAngleNav_Click" />
         </Grid>
 
