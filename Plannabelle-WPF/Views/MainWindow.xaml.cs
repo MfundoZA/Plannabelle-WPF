@@ -60,12 +60,28 @@ namespace Plannabelle_WPF.Views
 
         private void btnLeftAngleNav_Click(object sender, RoutedEventArgs e)
         {
-                btnLeftAngleNav.IsEnabled = MainViewModel.moveToPreviousSemester();
+                btnLeftAngleNav.IsEnabled = mainViewModel.moveToPreviousSemester();
+
+                if (mainViewModel.semesters.Count > 1)
+                {
+                    if (btnLeftAngleNav.IsEnabled == false)
+                    {
+                        btnRignAngleNav.IsEnabled = true;
+                    }
+                }
         }
 
         private void btnRignAngleNav_Click(object sender, RoutedEventArgs e)
         {
-            btnRignAngleNav.IsEnabled = MainViewModel.moveToNextSemester();
+            btnRignAngleNav.IsEnabled = mainViewModel.moveToNextSemester();
+
+            if (mainViewModel.semesters.Count > 1)
+            {
+                if (btnRignAngleNav.IsEnabled == false)
+                {
+                    btnLeftAngleNav.IsEnabled = true;
+                }
+            } 
         }
     }
 }
