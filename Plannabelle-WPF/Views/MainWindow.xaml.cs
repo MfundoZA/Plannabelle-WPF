@@ -21,10 +21,13 @@ namespace Plannabelle_WPF.Views
     /// </summary>
     public partial class MainWindow : Window
     {
+        MainViewModel mainViewModel;
+
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = new MainViewModel();
+            mainViewModel = new MainViewModel();
+            this.DataContext = mainViewModel;
         }
 
         private void mniNewSemesterOnClick(object sender, RoutedEventArgs e)
