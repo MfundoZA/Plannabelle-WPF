@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PlannabelleClassLibrary.Models;
+using PlannabelleClassLibrary.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -17,9 +19,22 @@ namespace Plannabelle_WPF.Views
     /// </summary>
     public partial class NewModuleWindow : Window
     {
+        public NewModuleViewModule NewModuleViewModel { get; set; }
+
         public NewModuleWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnSubmit_Click(object sender, RoutedEventArgs e)
+        {
+            Module module = new Module(0, "TEMP5212", "Temporary Module", 20);
+            Enrollment enrollment = new Enrollment(0, BaseViewModel.User, module, )
         }
     }
 }

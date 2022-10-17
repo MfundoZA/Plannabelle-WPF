@@ -7,6 +7,23 @@
         mc:Ignorable="d"
         Title="NewModuleWindow" Height="450" Width="800">
     <Grid>
-        
+        <StackPanel VerticalAlignment="Center" Margin="250,0,250,0" MaxHeight="400">
+            <StackPanel>
+                <Label x:Name="lblModuleCode" Content="Module Code:" Margin="8, 8, 8, 4" />
+                <TextBox x:Name="txtModuleCode" Margin="8, 4, 8, 4" />
+            </StackPanel>
+            <StackPanel>
+                <Label x:Name="lblModuleName" Content="Module Name:" Margin="8, 8, 8, 4" />
+                <TextBox x:Name="txtModuleName"  Margin="8, 4, 8, 4" />
+            </StackPanel>
+            <StackPanel>
+                <Label x:Name="lblNumberOfCredits" Content="Number Of Credits:" Margin="8, 8, 8, 4" />
+                <TextBox x:Name="txtNumberOfCredits"  Margin="8, 4, 8, 4" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="16">
+                <Button x:Name="btnCancel" Content="Cancel" Width="80" Margin="8" Click="btnCancel_Click"></Button>
+                <Button x:Name="btnSubmit" Content="Submit" Width="80" Margin="8" Click="btnSubmit_Click"></Button>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>
