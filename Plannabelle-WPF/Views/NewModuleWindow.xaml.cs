@@ -38,8 +38,26 @@ namespace Plannabelle_WPF.Views
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-            Module module = new Module(0, "TEMP5212", "Temporary Module", 20);
-            Enrollment enrollment = new Enrollment(0, BaseViewModel.User, module, )
+            int semesterId = Int32.Parse(cmbSemesters.SelectedValue.ToString());
+            var selectedSemester = (Semester) DbContext.Semester.Where(x => x.Id == semesterId).First();
+
+            // TEMP5212 | "Temporary Module" | 15 |
+            var moduleCode = txtModuleCode.Text;
+            var moduleName = txtModuleName.Text;
+            var numberOfCredits = Int32.Parse(txtNumberOfCredits.Text);
+            var numberOfClassHours = Int32.Parse(txtNumberOfClassHours.Text);
+            var selfStudyHours = Int32.Parse(NewModuleViewModel.calculateSelfStudyHours(numberOfCredits, selectedSemester, numberOfClassHours).ToString());
+            var selfStudyHoursRemaining = Int32.Parse(txtSelfStudyHoursRemainingForTheWeek.Text);
+
+
+            Module module = new Module(moduleCode, moduleName, numberOfCredits);
+            DbContext.Module.Add(module);
+            DbContext.SaveChanges();
+
+            var lastModule = DbContext.Module.OrderBy(x => x.Id).Last();
+            Enrollment enrollment = new Enrollment(BaseViewModel.User, lastModule, selectedSemester, numberOfClassHours, selfStudyHours, selfStudyHoursRemaining);
+            DbContext.Enrollment.Add(enrollment);
+            DbContext.SaveChanges();
         }
     }
 }
