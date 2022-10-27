@@ -19,11 +19,16 @@ namespace Plannabelle_WPF.Views
     /// </summary>
     public partial class NewModuleWindow : Window
     {
-        public NewModuleViewModule NewModuleViewModel { get; set; }
+        public NewModuleViewModel NewModuleViewModel { get; set; }
+        public PlannabelleDbContext DbContext { get; }
 
         public NewModuleWindow()
         {
             InitializeComponent();
+            
+            NewModuleViewModel = new NewModuleViewModel();
+            this.DataContext = NewModuleViewModel;
+            DbContext = PlannabelleContextDbFactory.GetDbContext();
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
