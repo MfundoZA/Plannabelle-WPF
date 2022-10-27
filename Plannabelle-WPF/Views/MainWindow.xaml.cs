@@ -1,4 +1,5 @@
-﻿using PlannabelleClassLibrary.ViewModels;
+﻿using PlannabelleClassLibrary.Data;
+using PlannabelleClassLibrary.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,7 @@ namespace Plannabelle_WPF.Views
     /// </summary>
     public partial class MainWindow : Window
     {
-        MainViewModel mainViewModel;
+        MainViewModel MainViewModel;
         PlannabelleDbContext DbContext;
 
         public MainWindow()
@@ -63,9 +64,9 @@ namespace Plannabelle_WPF.Views
 
         private void btnLeftAngleNav_Click(object sender, RoutedEventArgs e)
         {
-                btnLeftAngleNav.IsEnabled = mainViewModel.moveToPreviousSemester();
+                btnLeftAngleNav.IsEnabled = MainViewModel.moveToPreviousSemester();
 
-                if (mainViewModel.semesters.Count > 1)
+                if (MainViewModel.semesters.Count > 1)
                 {
                     if (btnLeftAngleNav.IsEnabled == false)
                     {
@@ -76,9 +77,9 @@ namespace Plannabelle_WPF.Views
 
         private void btnRignAngleNav_Click(object sender, RoutedEventArgs e)
         {
-            btnRignAngleNav.IsEnabled = mainViewModel.moveToNextSemester();
+            btnRignAngleNav.IsEnabled = MainViewModel.moveToNextSemester();
 
-            if (mainViewModel.semesters.Count > 1)
+            if (MainViewModel.semesters.Count > 1)
             {
                 if (btnRignAngleNav.IsEnabled == false)
                 {
