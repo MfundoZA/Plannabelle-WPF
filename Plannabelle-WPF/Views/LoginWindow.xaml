@@ -5,20 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Plannabelle_WPF.Views"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="450" Width="800">
+        Title="LoginWindow" Height="450" Width="800" Style="{StaticResource winDefault}">
     <Grid>
         <StackPanel VerticalAlignment="Center" Margin="250,0,250,0" MaxHeight="400">
             <StackPanel>
-                <Label x:Name="lblUsername" Content="Username:" Margin="8, 8, 8, 4" />
-                <TextBox x:Name="txtUsername"  Margin="8, 4, 8, 4" />
+                <Label x:Name="lblUsername" Content="Username:" Margin="8, 8, 8, 4" Style="{StaticResource lblOnDefault}" />
+                <TextBox x:Name="txtUsername"  Margin="8, 4, 8, 4" Text="MfundoTenza"/>
             </StackPanel>
             <StackPanel>
-                <Label x:Name="lblPassword" Content="Password:" Margin="8, 8, 8, 4" />
-                <PasswordBox x:Name="txtPassword"  Margin="8, 4, 8, 4"/>
+                <Label x:Name="lblPassword" Content="Password:" Margin="8, 8, 8, 4" Style="{StaticResource lblOnDefault}" />
+                <PasswordBox x:Name="txtPassword"  Margin="8, 4, 8, 4" Password="Landseen76"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="16">
-                <Button x:Name="btnLogin" Content="Login" Width="80" Margin="8" Click="btnLogin_Click"></Button>
-                <Button x:Name="btnRegister" Content="Register" Width="80" Margin="8" Click="btnRegister_Click"></Button>
+                <Button x:Name="btnRegister" Content="Register" Width="80" Margin="8" Click="btnRegister_Click" Style="{StaticResource btnSecondaryColor}"></Button>
+                <Button x:Name="btnLogin" Content="Login" Width="80" Margin="8" Click="btnLogin_Click" Style="{StaticResource btnPrimaryColor}"></Button>
             </StackPanel>
         </StackPanel>
     </Grid>
