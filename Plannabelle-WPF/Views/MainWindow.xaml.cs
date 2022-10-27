@@ -22,12 +22,15 @@ namespace Plannabelle_WPF.Views
     public partial class MainWindow : Window
     {
         MainViewModel mainViewModel;
+        PlannabelleDbContext DbContext;
 
         public MainWindow()
         {
             InitializeComponent();
-            mainViewModel = new MainViewModel();
-            this.DataContext = mainViewModel;
+            MainViewModel = new MainViewModel();
+            this.DataContext = MainViewModel;
+
+            DbContext = PlannabelleContextDbFactory.GetDbContext();
         }
 
         private void mniNewSemesterOnClick(object sender, RoutedEventArgs e)
