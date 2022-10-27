@@ -83,5 +83,10 @@ namespace Plannabelle_WPF.Views
                 }
             } 
         }
+
+        private void winMain_Loaded(object sender, RoutedEventArgs e)
+        {
+            var enrollments = DbContext.Enrollment.Where(x => x.User.Id == MainViewModel.User.Id);
+        }
     }
 }
