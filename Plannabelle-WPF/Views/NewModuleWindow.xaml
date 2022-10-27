@@ -20,6 +20,22 @@
                 <Label x:Name="lblNumberOfCredits" Content="Number Of Credits:" Margin="8, 8, 8, 4" />
                 <TextBox x:Name="txtNumberOfCredits"  Margin="8, 4, 8, 4" />
             </StackPanel>
+            <StackPanel>
+                <Label x:Name="lblSemesters" Content="Semester:" Margin="8, 8, 8, 4" />
+                <ComboBox x:Name="cmbSemesters" ItemsSource="{Binding semesterDictionary}" DisplayMemberPath="Value" SelectedValuePath="Key"  Margin="8, 4, 8, 4" />
+            </StackPanel>
+            <StackPanel>
+                <Label x:Name="lblNumberOfClassHours" Content="Number Of Class Hours:" Margin="8, 8, 8, 4" />
+                <TextBox x:Name="txtNumberOfClassHours"  Margin="8, 4, 8, 4" />
+            </StackPanel>
+            <StackPanel>
+                <Label x:Name="lblSelfStudyHours" Content="Number Of Self Study Hour:" Margin="8, 8, 8, 4" />
+                <TextBox x:Name="txtSelfStudyHours"  Margin="8, 4, 8, 4" />
+            </StackPanel>
+            <StackPanel>
+                <Label x:Name="lblSelfStudyHoursRemainingForTheWeek" Content="Number Of Self Study Hours Remaining (Weekly):" Margin="8, 8, 8, 4" />
+                <TextBox x:Name="txtSelfStudyHoursRemainingForTheWeek"  Margin="8, 4, 8, 4" />
+            </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="16">
                 <Button x:Name="btnCancel" Content="Cancel" Width="80" Margin="8" Click="btnCancel_Click"></Button>
                 <Button x:Name="btnSubmit" Content="Submit" Width="80" Margin="8" Click="btnSubmit_Click"></Button>
