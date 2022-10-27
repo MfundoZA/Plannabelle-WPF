@@ -1,7 +1,10 @@
-﻿using PlannabelleClassLibrary.Models;
+﻿using PlannabelleClassLibrary.Data;
+using PlannabelleClassLibrary.Models;
+using PlannabelleClassLibrary.Services;
 using PlannabelleClassLibrary.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
