@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Plannabelle_WPF.Views"
         mc:Ignorable="d"
-        Title="NewModuleWindow" Height="450" Width="800">
+        Title="NewModuleWindow" Height="600" Width="900"  WindowStartupLocation="CenterScreen">
     <Grid>
-        <StackPanel VerticalAlignment="Center" Margin="250,0,250,0" MaxHeight="400">
+        <StackPanel VerticalAlignment="Center" Margin="250,0,250,0">
             <StackPanel>
                 <Label x:Name="lblModuleCode" Content="Module Code:" Margin="8, 8, 8, 4" />
                 <TextBox x:Name="txtModuleCode" Margin="8, 4, 8, 4" />
