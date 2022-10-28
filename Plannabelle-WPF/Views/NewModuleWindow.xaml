@@ -5,40 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Plannabelle_WPF.Views"
         mc:Ignorable="d"
-        Title="NewModuleWindow" Height="600" Width="900"  WindowStartupLocation="CenterScreen">
+        Title="NewModuleWindow" Height="600" Width="900"  WindowStartupLocation="CenterScreen" Style="{StaticResource winDefault}">
     <Grid>
         <StackPanel VerticalAlignment="Center" Margin="250,0,250,0">
             <StackPanel>
-                <Label x:Name="lblModuleCode" Content="Module Code:" Margin="8, 8, 8, 4" />
+                <Label x:Name="lblModuleCode" Content="Module Code:" Margin="8, 8, 8, 4" Style="{StaticResource lblOnDefault}" />
                 <TextBox x:Name="txtModuleCode" Margin="8, 4, 8, 4" />
             </StackPanel>
             <StackPanel>
-                <Label x:Name="lblModuleName" Content="Module Name:" Margin="8, 8, 8, 4" />
+                <Label x:Name="lblModuleName" Content="Module Name:" Margin="8, 8, 8, 4" Style="{StaticResource lblOnDefault}" />
                 <TextBox x:Name="txtModuleName"  Margin="8, 4, 8, 4" />
             </StackPanel>
             <StackPanel>
-                <Label x:Name="lblNumberOfCredits" Content="Number Of Credits:" Margin="8, 8, 8, 4" />
+                <Label x:Name="lblNumberOfCredits" Content="Number Of Credits:" Margin="8, 8, 8, 4" Style="{StaticResource lblOnDefault}" />
                 <TextBox x:Name="txtNumberOfCredits"  Margin="8, 4, 8, 4" />
             </StackPanel>
             <StackPanel>
-                <Label x:Name="lblSemesters" Content="Semester:" Margin="8, 8, 8, 4" />
+                <Label x:Name="lblSemesters" Content="Semester:" Margin="8, 8, 8, 4" Style="{StaticResource lblOnDefault}" />
                 <ComboBox x:Name="cmbSemesters" ItemsSource="{Binding semesterDictionary}" DisplayMemberPath="Value" SelectedValuePath="Key"  Margin="8, 4, 8, 4" />
             </StackPanel>
             <StackPanel>
-                <Label x:Name="lblNumberOfClassHours" Content="Number Of Class Hours:" Margin="8, 8, 8, 4" />
+                <Label x:Name="lblNumberOfClassHours" Content="Number Of Class Hours:" Margin="8, 8, 8, 4" Style="{StaticResource lblOnDefault}" />
                 <TextBox x:Name="txtNumberOfClassHours"  Margin="8, 4, 8, 4" />
             </StackPanel>
             <StackPanel>
-                <Label x:Name="lblSelfStudyHours" Content="Number Of Self Study Hour:" Margin="8, 8, 8, 4" />
+                <Label x:Name="lblSelfStudyHours" Content="Number Of Self Study Hour:" Margin="8, 8, 8, 4" Style="{StaticResource lblOnDefault}" />
                 <TextBox x:Name="txtSelfStudyHours"  Margin="8, 4, 8, 4" />
             </StackPanel>
             <StackPanel>
-                <Label x:Name="lblSelfStudyHoursRemainingForTheWeek" Content="Number Of Self Study Hours Remaining (Weekly):" Margin="8, 8, 8, 4" />
+                <Label x:Name="lblSelfStudyHoursRemainingForTheWeek" Content="Number Of Self Study Hours Remaining (Weekly):" Margin="8, 8, 8, 4" Style="{StaticResource lblOnDefault}" />
                 <TextBox x:Name="txtSelfStudyHoursRemainingForTheWeek"  Margin="8, 4, 8, 4" />
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="16">
-                <Button x:Name="btnCancel" Content="Cancel" Width="80" Margin="8" Click="btnCancel_Click"></Button>
-                <Button x:Name="btnSubmit" Content="Submit" Width="80" Margin="8" Click="btnSubmit_Click"></Button>
+                <Button x:Name="btnCancel" Content="Cancel" Width="80" Margin="8" Click="btnCancel_Click" Style="{StaticResource btnSecondaryColor}" />
+                <Button x:Name="btnSubmit" Content="Submit" Width="80" Margin="8" Click="btnSubmit_Click" Style="{StaticResource btnPrimaryColor}" />
             </StackPanel>
         </StackPanel>
     </Grid>

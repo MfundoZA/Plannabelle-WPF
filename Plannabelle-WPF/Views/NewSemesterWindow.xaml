@@ -5,20 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Plannabelle_WPF.Views"
         mc:Ignorable="d"
-        Title="NewSemesterWindow" Height="450" Width="800">
+        Title="NewSemesterWindow" Height="450" Width="800" Style="{StaticResource winDefault}">
     <Grid>
         <StackPanel VerticalAlignment="Center" Margin="250,0,250,0" MaxHeight="400">
             <StackPanel>
-                <Label x:Name="lblSemesterStartDate" Content="Start Date:" Margin="8, 8, 8, 4" />
+                <Label x:Name="lblSemesterStartDate" Content="Start Date:" Margin="8, 8, 8, 4" Style="{StaticResource lblOnDefault}"/>
                 <DatePicker x:Name="dtpSemesterStartDate" Margin="8, 4, 8, 4" />
             </StackPanel>
             <StackPanel>
-                <Label x:Name="lblSemesterEndDate" Content="End Date:" Margin="8, 8, 8, 4" />
+                <Label x:Name="lblSemesterEndDate" Content="End Date:" Margin="8, 8, 8, 4" Style="{StaticResource lblOnDefault}"/>
                 <DatePicker x:Name="dtpSemesterEndDate"  Margin="8, 4, 8, 4" />
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="16">
-                <Button x:Name="btnCancel" Content="Cancel" Width="80" Margin="8" Click="btnCancel_Click"></Button>
-                <Button x:Name="btnSubmit" Content="Submit" Width="80" Margin="8" Click="btnSubmit_Click"></Button>
+                <Button x:Name="btnCancel" Content="Cancel" Width="80" Margin="8" Click="btnCancel_Click" Style="{StaticResource btnSecondaryColor}"></Button>
+                <Button x:Name="btnSubmit" Content="Submit" Width="80" Margin="8" Click="btnSubmit_Click" Style="{StaticResource btnPrimaryColor}"></Button>
             </StackPanel>
         </StackPanel>
     </Grid>
