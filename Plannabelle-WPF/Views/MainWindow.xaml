@@ -37,7 +37,7 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <!-- Todo Create ListBox item template -->
-                    <Label Content="{Binding Name}"/>
+                    <Label Content="{Binding Name}" Style="{StaticResource lblOnDefault}"/>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
