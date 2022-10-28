@@ -1,6 +1,8 @@
 ﻿using PlannabelleClassLibrary.Data;
+using PlannabelleClassLibrary.Models;
 using PlannabelleClassLibrary.ViewModels;
 using System;
+using System.Collections.ObjectModel;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -66,31 +68,40 @@ namespace Plannabelle_WPF.Views
         {
                 btnLeftAngleNav.IsEnabled = MainViewModel.moveToPreviousSemester();
 
-                if (MainViewModel.semesters.Count > 1)
+                if (MainViewModel.currentSemesterIndex < MainViewModel.semesters.Count - 1)
                 {
-                    if (btnLeftAngleNav.IsEnabled == false)
-                    {
                         btnRignAngleNav.IsEnabled = true;
-                    }
                 }
+
+            refreshList();
         }
 
         private void btnRignAngleNav_Click(object sender, RoutedEventArgs e)
         {
             btnRignAngleNav.IsEnabled = MainViewModel.moveToNextSemester();
 
-            if (MainViewModel.semesters.Count > 1)
-            {
-                if (btnRignAngleNav.IsEnabled == false)
-                {
+            if (MainViewModel.currentSemesterIndex > 0)
+            {             
                     btnLeftAngleNav.IsEnabled = true;
-                }
-            } 
+            }
+
+            refreshList();
         }
 
         private void winMain_Loaded(object sender, RoutedEventArgs e)
         {
-            var enrollments = DbContext.Enrollment.Where(x => x.User.Id == MainViewModel.User.Id);
+            refreshList();
+        }
+
+        private void refreshList()
+        {
+            var modules = (from module in DbContext.Module
+                           join enrollment in DbContext.Enrollment
+                           on module.Id equals enrollment.Module.Id
+                           where enrollment.Semester.Id == MainViewModel.CurrentSemester.Id
+                           select module).ToList();
+
+            MainViewModel.Modules = new ObservableCollection<Module>(modules);
         }
     }
 }
