@@ -4,18 +4,47 @@
              xmlns:local="clr-namespace:Plannabelle_WPF"
              StartupUri="Views/LoginWindow.xaml">
     <Application.Resources>
+        <Style x:Key="winDefault" TargetType="Window">
+            <Setter Property="Background" Value="#001514" />
+            <Setter Property="Foreground" Value="White" />
+        </Style>
+
+        <Style x:Key="menDefault" TargetType="Menu">
+            <Setter Property="Background" Value="#04724D" />
+            <Setter Property="Foreground" Value="White" />
+        </Style>
+
+        <Style x:Key="lblOnDefault" TargetType="Label">
+            <Setter Property="Foreground" Value="White" />
+        </Style>
+
+        <Style x:Key="btnPrimaryColor" TargetType="Button">
+            <Setter Property="Background" Value="#E6AF2E" />
+            <Setter Property="Foreground" Value="Black" />
+        </Style>
+
+        <Style x:Key="btnSecondaryColor" TargetType="Button">
+            <Setter Property="Background" Value="White" />
+            <Setter Property="Foreground" Value="Black" />
+        </Style>
+
         <Style x:Key="btnAngleNav" TargetType="Button">
             <Setter Property="FontSize" Value="24" />
             <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Foreground" Value="White" />
             <Setter Property="BorderBrush" Value="Transparent" />
 
             <Style.Triggers>
                 <Trigger Property="IsEnabled" Value="False">
-                    <Setter Property="Background" Value="Transparent" />
+                    <Setter Property="Opacity" Value="0.1" />
                     <Setter Property="BorderBrush" Value="Transparent" />
-                    <Setter Property="Foreground" Value="#AA9b9590" />
                 </Trigger>
             </Style.Triggers>
+        </Style>
+
+        <Style x:Key="lstDefault" TargetType="ListBox">
+            <Setter Property ="Background" Value="#56876D" />
+            <Setter Property="Foreground" Value="White" />
         </Style>
     </Application.Resources>
 </Application>
