@@ -45,6 +45,8 @@
         <Style x:Key="lstDefault" TargetType="ListBox">
             <Setter Property ="Background" Value="#56876D" />
             <Setter Property="Foreground" Value="White" />
+            <Setter Property="Margin" Value="16" />
+            <Setter Property="BorderBrush" Value="#00ABADB3" />
         </Style>
     </Application.Resources>
 </Application>
