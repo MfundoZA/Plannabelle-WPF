@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PlannabelleClassLibrary.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -17,9 +18,19 @@ namespace Plannabelle_WPF.Views
     /// </summary>
     public partial class ViewAllSemestersWindow : Window
     {
+        public ViewAllSemestersViewModel ViewAllSemestersViewModel { get; set; }
         public ViewAllSemestersWindow()
         {
             InitializeComponent();
+
+            ViewAllSemestersViewModel = new ViewAllSemestersViewModel();
+            DataContext = ViewAllSemestersViewModel;
+        }
+
+        private void lstSemesters_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ViewAllSemestersViewModel.SemesterSelected(lstSemesters.SelectedIndex);
+            this.Close();
         }
     }
 }
