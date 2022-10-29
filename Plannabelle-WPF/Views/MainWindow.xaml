@@ -18,7 +18,7 @@
             <MenuItem Header="New Module" Click="mniNewModuleOnClick" MinHeight="25" MaxHeight="30"></MenuItem>
             <MenuItem Header="Show All Semesters" Click="mniShowAllSemestersOnClick" MinHeight="25" MaxHeight="30"></MenuItem>
             <MenuItem Header="Add Self Study Hours" MinHeight="25" MaxHeight="30" Click="mniAddSelfHoursOnClick"></MenuItem>
-            <MenuItem Header="Settings" MinHeight="25" MaxHeight="30" Click="mniAddSelfHoursOnClick"></MenuItem>
+            <MenuItem Header="Settings" MinHeight="25" MaxHeight="30" Click="mniSettingsOnClick"></MenuItem>
         </Menu>
 
         <Grid Grid.Row="1">

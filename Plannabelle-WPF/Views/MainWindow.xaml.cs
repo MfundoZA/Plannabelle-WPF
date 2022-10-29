@@ -103,5 +103,12 @@ namespace Plannabelle_WPF.Views
 
             MainViewModel.Modules = new ObservableCollection<Module>(modules);
         }
+
+        private void mniSettingsOnClick(object sender, RoutedEventArgs e)
+        {
+                this.Hide();
+                new SettingsWindow().ShowDialog();
+                this.Show();
+        }
     }
 }
