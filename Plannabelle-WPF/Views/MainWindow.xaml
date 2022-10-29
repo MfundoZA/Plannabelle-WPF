@@ -8,20 +8,20 @@
     
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition MinHeight="25" MaxHeight="30"/>
+            <RowDefinition MinHeight="25" MaxHeight="25"/>
             <RowDefinition />
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
         
-        <Menu x:Name="mnuMenu" Grid.Row="0" MinHeight="25" MaxHeight="30" Style="{StaticResource menDefault}">
-            <MenuItem Header="New Semester" Click="mniNewSemesterOnClick" MinHeight="25" MaxHeight="30"></MenuItem>
-            <MenuItem Header="New Module" Click="mniNewModuleOnClick" MinHeight="25" MaxHeight="30"></MenuItem>
-            <MenuItem Header="Show All Semesters" Click="mniShowAllSemestersOnClick" MinHeight="25" MaxHeight="30"></MenuItem>
-            <MenuItem Header="Add Self Study Hours" MinHeight="25" MaxHeight="30" Click="mniAddSelfHoursOnClick"></MenuItem>
-            <MenuItem Header="Settings" MinHeight="25" MaxHeight="30" Click="mniSettingsOnClick"></MenuItem>
+        <Menu x:Name="mnuMenu" Grid.Row="0" MinHeight="25" MaxHeight="25" Style="{StaticResource menDefault}">
+            <MenuItem Header="New Semester" Click="mniNewSemesterOnClick" MinHeight="25" MaxHeight="25"></MenuItem>
+            <MenuItem Header="New Module" Click="mniNewModuleOnClick" MinHeight="25" MaxHeight="25"></MenuItem>
+            <MenuItem Header="Show All Semesters" Click="mniShowAllSemestersOnClick" MinHeight="25" MaxHeight="25"></MenuItem>
+            <MenuItem Header="Add Self Study Hours" MinHeight="25" MaxHeight="25" Click="mniAddSelfHoursOnClick"></MenuItem>
+            <MenuItem Header="Settings" MinHeight="25" MaxHeight="25" Click="mniSettingsOnClick"></MenuItem>
         </Menu>
 
-        <Grid Grid.Row="1">
+        <Grid x:Name="grdContent" Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
                 <ColumnDefinition Width="4*" />
@@ -33,7 +33,7 @@
             <Button x:Name="btnRignAngleNav" Grid.Column="2" Content="&gt;" Style="{StaticResource btnAngleNav}"  HorizontalAlignment="Right" Margin="16 0" Click="btnRignAngleNav_Click" />
         </Grid>
 
-        <ListBox Grid.Row="2" Margin="16" BorderBrush="#00ABADB3" ItemsSource="{Binding Modules}" Style="{StaticResource lstDefault}">
+        <ListBox x:Name="lstModules" Grid.Row="2" ItemsSource="{Binding Modules}" Style="{StaticResource lstDefault}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <!-- Todo Create ListBox item template -->
