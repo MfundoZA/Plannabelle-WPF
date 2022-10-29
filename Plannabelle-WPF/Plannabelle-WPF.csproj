@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Xamboarding.WPF" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\PlannabelleClassLibrary\PlannabelleClassLibrary\PlannabelleClassLibrary.csproj" />
   </ItemGroup>
 
