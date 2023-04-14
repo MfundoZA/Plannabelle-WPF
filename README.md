@@ -2,7 +2,7 @@
 
 ## A study time management platform for students made with WPF & ASP.NET and Azure SQL.
 
-
+![Plannabelle Main Window](Images/Main%20Window.png)
 
 ## Description
 Planabelle is a web app and desktop application that helps students manage how much time they spend on studying
