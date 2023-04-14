@@ -95,13 +95,16 @@ namespace Plannabelle_WPF.Views
 
         private void refreshList()
         {
-            var modules = (from module in DbContext.Module
-                           join enrollment in DbContext.Enrollment
-                           on module.Id equals enrollment.Module.Id
-                           where enrollment.Semester.Id == MainViewModel.CurrentSemester.Id
-                           select module).ToList();
+            if (MainViewModel.semesters.Count != 0)
+            {
+                var modules = (from module in DbContext.Module
+                               join enrollment in DbContext.Enrollment
+                               on module.Id equals enrollment.Module.Id
+                               where enrollment.Semester.Id == MainViewModel.CurrentSemester.Id
+                               select module).ToList();
 
-            MainViewModel.Modules = new ObservableCollection<Module>(modules);
+                MainViewModel.Modules = new ObservableCollection<Module>(modules);
+            }
         }
 
         private void mniSettingsOnClick(object sender, RoutedEventArgs e)
